@@ -44,7 +44,7 @@ jobs:
                 os: [ ubuntu-22.04, ubuntu-24.04 ]
         steps:
             - uses: actions/checkout@v4
-            - uses: actions/setup-python@v5
+            - uses: actions/setup-python@v6
               with:
                 python-version: '3.11'
             - name: Test CMake min
@@ -107,7 +107,7 @@ jobs:
                 config: [ Debug, Release ]
         steps:
             - uses: actions/checkout@v4
-            - uses: actions/setup-python@v5
+            - uses: actions/setup-python@v6
               with:
                 python-version: '3.11'
             - uses: lukka/get-cmake@latest
@@ -142,7 +142,7 @@ jobs:
         runs-on: ubuntu-24.04
         steps:
             - uses: actions/checkout@v4
-            - uses: actions/setup-python@v5
+            - uses: actions/setup-python@v6
               with:
                 python-version: '3.11'
             - uses: lukka/get-cmake@latest
@@ -247,7 +247,7 @@ jobs:
                 static_build: [ APPLE_STATIC_LOADER=ON, APPLE_STATIC_LOADER=OFF ]
         steps:
             - uses: actions/checkout@v4
-            - uses: actions/setup-python@v5
+            - uses: actions/setup-python@v6
               with:
                 python-version: '3.11'
             - run: |
@@ -276,7 +276,7 @@ jobs:
             CMAKE_SYSTEM_NAME: [ iOS, tvOS ]
       steps:
           - uses: actions/checkout@v4
-          - uses: actions/setup-python@v5
+          - uses: actions/setup-python@v6
             with:
               python-version: '3.11'
           - run: |
@@ -309,7 +309,7 @@ jobs:
                 generator: [ Ninja, Xcode ]
         steps:
             - uses: actions/checkout@v4
-            - uses: actions/setup-python@v5
+            - uses: actions/setup-python@v6
               with:
                 python-version: '3.11'
             - run: |
@@ -349,7 +349,7 @@ jobs:
           shell: bash
       steps:
         - uses: actions/checkout@v4
-        - uses: actions/setup-python@v5
+        - uses: actions/setup-python@v6
           with:
             python-version: '3.11'
         - name: Setup uasm
@@ -376,7 +376,7 @@ jobs:
           shell: bash
       steps:
         - uses: actions/checkout@v4
-        - uses: actions/setup-python@v5
+        - uses: actions/setup-python@v6
           with:
             python-version: '3.11'
         - run: |
@@ -398,7 +398,7 @@ jobs:
           shell: bash
       steps:
         - uses: actions/checkout@v4
-        - uses: actions/setup-python@v5
+        - uses: actions/setup-python@v6
           with:
             python-version: '3.11'
         # Make sure this doesn't fail even without explicitly setting '-D USE_MASM=OFF' and without uasm
